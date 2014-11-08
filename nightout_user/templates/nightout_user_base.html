@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Promotions<b class="caret"></b></a>
+  <ul class="dropdown-menu">
+    <li><a href="/user/promote">Whats On</a></li>
+    <li><a href="/user/promote_map">Explore Map</a></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Night Out<b class="caret"></b></a>
+  <ul class="dropdown-menu">
+    <li><a href="/user/nightout_drinks">Drinks</a></li>
+    <li><a href="/user/nightout_music">Music</a></li>
+    <li><a href="/user/nightout_establishments">Establishments</a></li>
+    <li><a href="/user/nightout_events">Events</a></li>
+  </ul>
+</li>
+<li>
+  <a href="/user/tonight">Tonight</a>
+</li>
+<li>
+  <a href="/user/past">Previous Nights</a>
+</li>
+{% endblock %}
+
+{% block sidebarTitle %}
+Social Media
+{% endblock %}
+
+{%block sidebarContent %}
+<div class="panel panel-default">
+  <div class="panel-heading">Twitter Feed</div>
+  <table class="table">
+    <tr><td>@NightOut_App is a really good app</td></tr>
+    <tr><td>@NightOut_App check out my epic night out #karnage</td></tr>
+  </table>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">Facebook</div>
+  <table class="table">
+    <tr><td>Look at <a href="#">this map</a> of where we went it was a sick night</td></tr>
+    <tr><td>NightOut #bestapp</td></tr>
+  </table>
+</div>
+{% endblock %}
+
+{% block head %}
+<link href="/static/css/nightout_user_base.css" rel="stylesheet">
+{% block style %}{% endblock %}
+{% endblock %}
+
+{% block end %}
+<script type="text/javascript" src="/static/js/nightout_user_base.js"></script>
+{% block script %}{% endblock %}
+{% endblock %}
+d

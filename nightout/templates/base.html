@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="author" content="{% block author %}{% endblock %}">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="/static/css/bootstrap_theme.css" rel="stylesheet"> -->
+    <link href="/static/css/base.css" rel="stylesheet">
+    <link href="/static/css/jquery-ui.custom.css" rel="stylesheet">
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+  <div id="wrap">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img id="top-icon" src="/static/images/TopIconLight.png"><strong id="top-brand">NightOut</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            {% block navbar %}
+            {% endblock navbar %}
+          </ul>
+<!--           <ul class="nav navbar-nav navbar-right">
+            <li><a href="/nightout">Log Out</a></li>
+          </ul> -->
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-left" style="height:100%;">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
+          <div class="well-purple sidebar-nav">
+            <ul class="nav">
+              <h4 style="text-align:center">{% block sidebarTitle %}{% endblock %}</h4>
+              {% block sidebarContent %}
+              {% endblock %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9"><!-- style="height:600px"> -->
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+      {% block footer %}
+      {% endblock %}
+      </div>
+    </div>
+<!--       <div class="container">
+        <div class="col-xs-8 col-sm-12">
+
+        </div>
+        <div class="col-xs-4 visible-xs">
+          <p class="pull-right">
+              <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Sidebar</button>
+          </p>
+        </div>
+      </div> -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jquery.ui.core.js"></script>
+    <script src="/static/js/jquery.ui.widget.js"></script>
+    <script src="/static/js/jquery.ui.mouse.js"></script>
+    <script src="/static/js/jquery.ui.slider.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/base.js"></script>
+    {% block end %}
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+Night Out
+{% endblock %}
+
+{% block sidebarTitle %}
+The NightOut App
+{% endblock %}
+
+{% block sidebarContent %}
+<div style="height:10px"></div>
+<img src="/static/images/phone.png" style="width:100%">
+<div style="height:20px"></div>
+<a href="#"><img src="/static/images/playStore.png" style="width:100%"></a>
+<div style="height:10px"></div>
+<a href="#"><img src="/static/images/appStore.png" style="width:100%"></a>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron" style="padding-top:20px;padding-bottom:20px;">
+<h1>NightOut<h1>
+<img class="rounded-corner" src="/static/images/nightRemember.jpg" style="width:100%">
+<a href="login"><div class="btn btn-primary">Login</div></a>
+<a href="#"><div class="btn btn-default">Create Account</div></a>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="row">
+  <p>NightOut Web Application</p>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+###
+# Python
+###
+
+*.pyc
+
+
+###
+# Mac
+###
+
+.DS_STORE
+
+
+###
+# Virtual Environment
+###
+
+venv/

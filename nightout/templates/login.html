@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block sidebarTitle %}
+Help
+{% endblock %}
+
+{% block sidebarContent %}
+<p>If you have a facebook account and you would like the ability to share your nights with facebook friends please log into facebook</p>
+<p>If you ether do not have a facebook account or would prefer not to link this system to facebook you can login bellow</p>
+<p>Business owners please create an account to define your establishment and add events</p>
+{% endblock %}
+
+{% block content %}
+<div class="col-sm-6">
+  <h4>Users</h4>
+  <p>Login with Facebook or Register</p>
+  <div class="form-group">
+    <div class="input-group input-group-md">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+      <input type="text" class="form-control" placeholder="Username">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group input-group-md">
+      <span class="input-group-addon">#</span>
+      <input type="text" class="form-control" placeholder="Password">
+    </div>
+  </div>
+  <a href="/user"><div class="btn btn-primary">Login</div></a>
+  <a href="/user"><div class="btn btn-default">Register</div></a>
+</div>
+<div class="col-sm-6">
+  <h4>Business</h4>
+  <p>Create Account</p>
+  <div class="form-group">
+    <div class="input-group input-group-md">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+      <input type="text" class="form-control" placeholder="Business Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group input-group-md">
+      <span class="input-group-addon">#</span>
+      <input type="text" class="form-control" placeholder="Password">
+    </div>
+  </div>
+  <a href="/company"><div class="btn btn-primary">Create</div></a>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="row">
+  <p>NightOut Web Application</p>
+</div>
+{% endblock %}

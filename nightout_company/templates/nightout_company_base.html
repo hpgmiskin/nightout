@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}
+Company - {% block subTitle %}{% endblock %}
+{% endblock %}
+
+{% block navbar %}
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Establishment<b class="caret"></b></a>
+  <ul class="dropdown-menu">
+    <li><a href="/company/edit_establishment">Edit Details</a></li>
+    <li><a href="/company/edit_location">Edit Location</a></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+  <ul class="dropdown-menu">
+    <li><a href="/company/edit_event">Add</a></li>
+    <li><a href="/company/view_past_events">View Past</a></li>
+    <li><a href="/company/view_future_events">View Future</a></li>
+  </ul>
+</li>
+<li><a href="/company/promote">Promote</a></li>
+<!-- <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Promote<b class="caret"></b></a>
+  <ul class="dropdown-menu">
+    <li><a href="/company/promote_feature">Feature Event</a></li>
+    <li><a href="/company/promote_direct">Direct Advertising</a></li>
+  </ul>
+</li> -->
+{% endblock %}
+
+{%block sidebarContent %}
+<div class="panel panel-default">
+  <div class="panel-heading">User Activity</div>
+  <table class="table">
+    <tr><td>12 users have clicked attending on your <a href="#">event</a></td></tr>
+    <tr><td>26 users are with 2 miles of your establishment would you like to <a href="#">setup a tailored advert</a></td></tr>
+  </table>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">Past User Activity</div>
+  <table class="table">
+    <tr><td>24 users attended your most recent event</td></tr>
+    <tr><td>Users rated your night <a href="#">special sunday</a> with 4 stars</td></tr>
+  </table>
+</div>
+{% endblock %}
+
+{% block head %}
+<link href="/static/css/nightout_company_base.css" rel="stylesheet">
+{% block style %}{% endblock %}
+{% endblock %}
+
+{% block end %}
+<script type="text/javascript" src="/static/js/nightout_company_base.js"></script>
+{% block script %}{% endblock %}
+{% endblock %}

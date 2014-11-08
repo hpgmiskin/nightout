@@ -1,0 +1,22 @@
+#map_canvas {
+	height: 100%;
+}
+
+.connecting-dots {
+	margin-top: -20px;
+	height: 40px;
+	width: 20px;
+	border-right-style:dotted;
+	border-right-color: 3a82bf;
+	border-right-width: 4px;
+}
+
+.center-box {
+	height: 200px;
+	display: block;
+	margin: 0px auto;
+}
+
+.outer-box {
+	padding: 0px auto;
+}

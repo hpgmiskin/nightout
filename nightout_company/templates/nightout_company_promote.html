@@ -1,0 +1,65 @@
+{% extends "nightout_company_base.html" %}
+
+{% block subTitle %}
+Promote
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+  <div class="col-sm-6 col-xs-8">
+    <h3>Promote Events</h3>
+  </div>
+  <div class="col-sm-6 col-xs-4">
+    <div class="btn-group" style="padding-top:15px">
+      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Filter By <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Date</a></li>
+        <li><a href="#">Event</a></li>
+        <li><a href="#">Establishment</a></li>
+        <li><a href="#">Total Establishments</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="panel" style="margin:10px auto">
+    <div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        {% for header in headers %}
+        <td><strong>{{header}}</strong></td>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        {% for cell in row %}
+        <td>{{cell}}</td>
+        {% endfor %}
+        <td>
+          <a href="#"><div class="btn btn-sm btn-info">Featured Event <span class="glyphicon glyphicon-correct"/></div></a>
+          <a href="#"><div class="btn btn-sm btn-primary">Tailored Advert <span class="glyphicon glyphicon-correct"/></div></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="panel" style="margin:10px auto">
+  <div class="container">
+    <h4 style="margin-bottom:0px">Featured Event</h4>
+    <p>Select featured event if you want more people to see your event. This type of advertising pushes the event to the top of our recomendation list for the day of the event.</P>
+  </div>
+</div>
+<div class="panel" style="margin:10px auto">
+  <div class="container">
+    <h4 style="margin-bottom:0px">Tailored Advert</h4>
+    <p>Tailored adverts allows your establishment to deliver an advert directly to a user that is close by. This type of advertising is more expensive as you chose exactly who will view your advert and only pay for the users that actually follow through in attending your event</P>
+  </div>
+</div>
+</div>
+{% endblock %}

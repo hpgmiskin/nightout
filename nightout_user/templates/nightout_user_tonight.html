@@ -1,0 +1,66 @@
+{% extends "nightout_user_base.html" %}
+
+{% block subTitle %}
+Tonight
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing"></script>
+<script type="text/javascript" src="/static/js/nightout_user_explore.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+  <div class="col-sm-6 col-xs-8">
+    <h3>Tonights Plan</h3>
+  </div>
+  </div>
+  <div style="height:20px"></div>
+  <div class="list-group" style="margin:0px important!;border:0px;">
+    <div class="list-group-item">
+      <div class="row">
+        <div class="list-group-item-heading col-xs-8 col-sm-6"><h4>Start Night</h4></div>
+        <div class="list-group-item-heading col-xs-4 col-sm-6" style="text-align:right"><a href="#"><div class="btn btn-sm btn-primary">Share <span class="glyphicon glyphicon-user"/></div></a></div>
+      </div>
+      <div class="row">
+        <div class="list-group-item-text col-xs-8 col-sm-6">Westridge Road</div>
+        <div class="list-group-item-text col-xs-4 col-sm-6" style="text-align:right">8:00pm</div>
+      </div>
+    </div>
+    <div class="list-group-item active" style="margin:0px important!">
+      <div class="row">
+        <div class="list-group-item-heading col-xs-8 col-sm-6"><h4>Southwestern Arms</h4></div>
+        <div class="list-group-item-heading col-xs-4 col-sm-6" style="text-align:right"><a href="#"><div class="btn btn-sm btn-primary">Share <span class="glyphicon glyphicon-user"/></div></a></div>
+      </div>
+      <div class="row">
+        <div class="list-group-item-text col-xs-8 col-sm-6">St Denys</div>
+        <div class="list-group-item-text col-xs-4 col-sm-6" style="text-align:right">9:00pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="connecting-dots"></div>
+  <div class="list-group">
+    <div class="list-group-item">
+      <div class="row">
+        <div class="list-group-item-heading col-xs-8 col-sm-6"><h4>Jesters Monday</h4></div>
+        <div class="list-group-item-heading col-xs-4 col-sm-6" style="text-align:right"><a href="#"><div class="btn btn-sm btn-primary">Share <span class="glyphicon glyphicon-user"/></div></a></div>
+      </div>
+      <div class="row">
+        <div class="list-group-item-text col-xs-8 col-sm-6">Porstwood Road</div>
+        <div class="list-group-item-text col-xs-4 col-sm-6" style="text-align:right">10:30pm</div>
+      </div>
+    </div>
+    <div class="list-group-item">
+      <div class="row">
+        <div class="list-group-item-heading col-xs-8 col-sm-6"><h4>JUNK Club</h4></div>
+        <div class="list-group-item-heading col-xs-4 col-sm-6" style="text-align:right"><a href="#"><div class="btn btn-sm btn-primary">Share <span class="glyphicon glyphicon-user"/></div></a></div>
+      </div>
+      <div class="row">
+        <div class="list-group-item-text col-xs-8 col-sm-6">Bedford Place</div>
+        <div class="list-group-item-text col-xs-4 col-sm-6" style="text-align:right">12:00pm</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

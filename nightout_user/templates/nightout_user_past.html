@@ -1,0 +1,49 @@
+{% extends "nightout_user_base.html" %}
+
+{% block subTitle %}
+Past Events
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+  <div class="col-sm-6 col-xs-8">
+    <h3>Previously Recorded Nights</h3>
+  </div>
+  <div class="col-sm-6 col-xs-4">
+    <div class="btn-group" style="padding-top:15px">
+      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Filter By <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Date</a></li>
+        <li><a href="#">Event</a></li>
+        <li><a href="#">Establishment</a></li>
+        <li><a href="#">Total Establishments</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div style="height:20px"></div>
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        {% for header in headers %}
+        <td><strong>{{header}}</strong></td>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        {% for cell in row %}
+        <td>{{cell}}</td>
+        {% endfor %}
+        <td>
+          <a href="#"><div class="btn btn-sm btn-info">View <span class="glyphicon glyphicon-search"/></div></a>
+          <a href="#"><div class="btn btn-sm btn-primary">Share <span class="glyphicon glyphicon-user"/></div></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

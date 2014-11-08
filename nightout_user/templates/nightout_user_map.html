@@ -1,0 +1,14 @@
+{% extends "nightout_user_base.html" %}
+
+{% block subTitle %}
+Index
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing"></script>
+<script type="text/javascript" src="/static/js/nightout_user_explore.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="map_canvas" style="height:500px"></div>
+{% endblock %}
