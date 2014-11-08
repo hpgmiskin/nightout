@@ -18,30 +18,45 @@ To run this application its best to use a virtual environment. The requirements 
 
 - Install virtualenv by typing the following into the terminal
 
-    $ pip3 install vitualenv
+```
+$ pip3 install vitualenv
+```
 
 - Navigate to the local directory containing this repository in terminal
 
-    $ cd FOLDER_PATH
+```
+$ cd FOLDER_PATH
+```
+
 - Create a new virtual environment in this directory
 
-    $ virtualenv -p python3 venv
+```
+$ virtualenv -p python3 venv
+```
 
 - Activate the virtual environment
 
-    $ source venv/bin/activate
+```
+$ source venv/bin/activate
+```
 
 - Install requirements using pip3
 
-    $ pip3 install -r requirements.txt --allow-all-external
+```
+$ pip3 install -r requirements.txt --allow-all-external
+```
 
 - Run the server
 
-    $ python3 manage.py runserver
+```
+$ python3 manage.py runserver
+```
 
 - Open you internet browser and navigate to
 
-    localhost:8000
+```
+localhost:8000
+```
 
 - To end the server press `Ctrl + C` in the terminal window 
 
